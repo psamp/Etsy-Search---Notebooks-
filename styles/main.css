@@ -1,0 +1,10 @@
+.container {
+  background-color: #F5F5F1; }
+
+.nav {
+  background-color: white;
+  border-bottom: 10px black;
+  height: 80px; }
+
+.nav nav {
+  border-bottom: 10px block solid; }
