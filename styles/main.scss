@@ -1,19 +1,12 @@
-$etsylogocolor:#F45800;
-$linkcolor:#0192B5;
-$pricecolor:#78C042;
-$fontcolor:#555555;
-$mainbgcolor:#F5F5F1;
-$align:middle;
+body {
 
-.container {
-  background-color:$mainbgcolor;
 }
 
-.nav {
-  background-color: white;
-  border-bottom:10px black;
+.container {
+
+}
+
+nav {
   height:80px;
-    nav {
-      border-bottom:10px block solid;
-  }
+  background-color: red;
 }
