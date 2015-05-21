@@ -1,10 +1,24 @@
 .container {
-  background-color: #F5F5F1; }
+  overflow: hidden; }
 
-.nav {
-  background-color: white;
-  border-bottom: 10px black;
-  height: 80px; }
+nav {
+  padding: 0;
+  height: 80px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F0F0EC; }
 
-.nav nav {
-  border-bottom: 10px block solid; }
+nav span {
+  display: inline-block;
+  vertical-align: middle; }
+
+.left {
+  padding-top: 23px;
+  margin-left: 220px; }
+
+form {
+  margin-left: 18px;
+  height: 33px;
+  display: inline-block; }
+
+form input {
+  width: 253px; }

@@ -1,12 +1,41 @@
+$searchcolor:#33A5C0;
+$etsyfive:#F45800;
+$navbordercolor: #F0F0EC;
+
+@mixin navborder ($navbordercolor) {
+  border-bottom: 1px solid $navbordercolor;
+}
+
 body {
 
 }
 
 .container {
-
+overflow: hidden;
 }
 
 nav {
+  padding:0;
   height:80px;
-  background-color: red;
+  background-color: #FFFFFF;
+  @include navborder($navbordercolor);
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+}
+
+.left {
+  padding-top: 23px;
+  margin-left:220px;
+}
+
+form {
+  margin-left:18px;
+  height:33px;
+  display:inline-block;
+  input {
+    width:253px;
+  }
+  
 }
