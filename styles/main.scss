@@ -85,20 +85,25 @@ form {
   color:#666666;
   height:35px;
   wiidth:72px;
-  float:left;
     &:hover {
       border:1px solid #999999;
     }
+    &::after {
+      content: "▾";
+      color:#bbb;
+      font-size:8px;
+      vertile-align:$verticalalign;   
+    }
     
-    .triangle {
-    width: 0;
-    height: 0;
-    float:right;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 7px solid #BBBBBB;
-    display:block;
-    text-align:10px;
-  }
+  //   .triangle {
+  //   width: 0;
+  //   height: 0;
+  //   float:right;
+  //   border-left: 4px solid transparent;
+  //   border-right: 4px solid transparent;
+  //   border-top: 7px solid #BBBBBB;
+  //   display:block;
+  //   text-align:10px;
+  // }
 }
 // end etsy logo, search and browse
