@@ -1,44 +1,50 @@
+// VARIABLES & MIXINS
 $searchcolor:#33A5C0;
 $etsyfive:#F45800;
 $navbordercolor: #F0F0EC;
+$verticalalign:middle;
 
 @mixin navborder ($navbordercolor) {
   border-bottom: 1px solid $navbordercolor;
 }
 
+@mixin blockalign ($verticalalign) {
+  display:inline-block;
+  vertical-align: $verticalalign;
+}
+// END VARIABLES & MIXINS
+
+// BODY & CONTAINER
 body {
 
 }
 
 .container {
-overflow: hidden;
+  overflow: hidden;
 }
+// END BODY & CONTAINER
 
-nav {
+// NAV
+
+.navigation {
   padding:0;
   height:80px;
   background-color: #FFFFFF;
+  overflow: hidden;
   @include navborder($navbordercolor);
     span {
-      display: inline-block;
-      vertical-align: middle;
+      @include blockalign($verticalalign);
+    }
+    .left {
+     padding-top: 25px;
+      margin-left:220px;
     }
 }
 
-.left {
-  padding-top: 25px;
-  margin-left:220px;
-    button {
-      border: 1px solid #E5E5E5;
-      background-color:white;
-      height:30px;
-  }
-}
+// etsy logo, search & browse
 
 form {
   margin-left:18px;
-  display:inline-block;
-  vertical-align: middle;
   font-size:16px;
   border-radius:10px;
 
@@ -49,20 +55,50 @@ form {
     border: 1px solid #D9D9D5;
     border-top-left-radius:5px;
     border-bottom-left-radius:5px;
+    @include blockalign($verticalalign);
 
   }
   .sbutton, {
     width:78px;
-    height:3-px;
     background-color:$searchcolor;
     color:white;
     text-decoration: bold;
     border: 1px solid #D9D9D5;
+    border-left:0;
     border-radius:0;
     border-top-right-radius:5px;
     border-bottom-right-radius: 5px;
     line-height:17px;
     padding:0;
     margin:0;
+    margin-right:18px;
+    height:35px;
   }
 }
+
+.browse {
+  border:1px solid #E5E5E5;
+  border-radius:5px;
+  background-color:white;
+  text-align:center;
+  font-size:14px;
+  color:#666666;
+  height:35px;
+  wiidth:72px;
+  float:left;
+    &:hover {
+      border:1px solid #999999;
+    }
+    
+    .triangle {
+    width: 0;
+    height: 0;
+    float:right;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid #BBBBBB;
+    display:block;
+    text-align:10px;
+  }
+}
+// end etsy logo, search and browse
