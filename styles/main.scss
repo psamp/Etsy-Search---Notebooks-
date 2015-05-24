@@ -1,8 +1,13 @@
 // VARIABLES & MIXINS
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 $searchcolor:#33A5C0;
 $etsyfive:#F45800;
 $navbordercolor: #F0F0EC;
 $verticalalign:middle;
+$bordercolor:#E1E3DF;
 
 @mixin navborder ($navbordercolor) {
   border-bottom: 1px solid $navbordercolor;
@@ -12,16 +17,30 @@ $verticalalign:middle;
   display:inline-block;
   vertical-align: $verticalalign;
 }
+
+@mixin colorradiusgrey ($bordercolor) {
+  border-radius:3px;
+  border: $bordercolor;
+}
+
 // END VARIABLES & MIXINS
 
 // BODY & CONTAINER
 body {
-
+  color:#555;
+  button {
+  }
+  background-color:#F5F5F1;
 }
 
 .container {
-  overflow: hidden;
+  width:980px;
+  outline:none;
+  margin-left:auto;
+  margin-right: auto;
+  margin:0 auto;
 }
+
 // END BODY & CONTAINER
 
 // NAV
@@ -29,8 +48,11 @@ body {
 .navigation {
   padding:0;
   height:80px;
+  width:100%;
   background-color: #FFFFFF;
   overflow: hidden;
+  margin-bottom:30px;
+  box-shadow: 0px 0px 10px rgba(176, 176, 176, 1);
   @include navborder($navbordercolor);
     span {
       @include blockalign($verticalalign);
@@ -38,6 +60,12 @@ body {
     .left {
      padding-top: 25px;
       margin-left:220px;
+      float:left;
+    }
+      .right {
+        float:right;
+      padding-top: 25px;
+      margin-right:220px;
     }
 }
 
@@ -73,6 +101,7 @@ form {
     margin:0;
     margin-right:18px;
     height:35px;
+
   }
 }
 
@@ -84,26 +113,85 @@ form {
   font-size:14px;
   color:#666666;
   height:35px;
-  wiidth:72px;
+  width:72px;
+  position:relative;
+  @include blockalign($verticalalign);
     &:hover {
       border:1px solid #999999;
     }
     &::after {
       content: "▾";
       color:#bbb;
-      font-size:8px;
+      font-size:10px;
+      left:3px;
+      line-height:1em;
+      position: relative;
       vertile-align:$verticalalign;   
     }
-    
-  //   .triangle {
-  //   width: 0;
-  //   height: 0;
-  //   float:right;
-  //   border-left: 4px solid transparent;
-  //   border-right: 4px solid transparent;
-  //   border-top: 7px solid #BBBBBB;
-  //   display:block;
-  //   text-align:10px;
-  // }
 }
 // end etsy logo, search and browse
+// END NAV
+
+// ITEMS
+.itemArea {
+  max-width:100%;
+  @include outer-container;
+}
+
+aside {
+  background-color:white;
+  font-size:13px;
+  @include colorradiusgrey ($bordercolor);
+  @include span-columns(3);
+    
+    ul {
+      margin:0;
+      padding:25px;
+      background-color:white;
+      border-radius:5px;
+
+      li {
+        list-style:none;
+        padding-bottom:10px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color:$searchcolor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+.items {
+  @include span-columns(8.5);
+
+  .itemData {
+    overflow:hidden;
+    margin-bottom:30px;
+    width:225px;
+    height:272px;
+    background-color:white;
+    @include colorradiusgrey ($bordercolor);
+    font-size:12px;
+    @include span-columns(4);
+    @include omega(3n);
+      
+      img {
+        width:225px;
+        height:auto;
+      }
+
+    }
+}
+
+p {
+  title {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+}
