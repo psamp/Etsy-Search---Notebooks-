@@ -8,6 +8,10 @@ $etsyfive:#F45800;
 $navbordercolor: #F0F0EC;
 $verticalalign:middle;
 $bordercolor:#E1E3DF;
+$pricecolor:#78C042;
+$sellercolor:#B4B2B4;
+$itemDataMargin: 7px;
+$fontcolor:#555555;
 
 @mixin navborder ($navbordercolor) {
   border-bottom: 1px solid $navbordercolor;
@@ -27,10 +31,20 @@ $bordercolor:#E1E3DF;
 
 // BODY & CONTAINER
 body {
-  color:#555;
-  button {
-  }
+  color:$fontcolor;
   background-color:#F5F5F1;
+
+  button, input {
+    outline: none;
+  }
+
+  a {
+    color:$searchcolor;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .container {
@@ -51,58 +65,56 @@ body {
   width:100%;
   background-color: #FFFFFF;
   overflow: hidden;
-  margin-bottom:30px;
+  margin-bottom:35px;
   box-shadow: 0px 0px 10px rgba(176, 176, 176, 1);
   @include navborder($navbordercolor);
     span {
       @include blockalign($verticalalign);
     }
     .left {
-     padding-top: 25px;
+      padding-top: 20px;
       margin-left:220px;
       float:left;
     }
-      .right {
-        float:right;
-      padding-top: 25px;
+    .right {
+      float:right;
+      padding-top: 20px;
       margin-right:220px;
+      margin-top: -5px;
     }
 }
 
 // etsy logo, search & browse
 
-form {
-  margin-left:18px;
-  font-size:16px;
-  border-radius:10px;
+.searchtext {
+  @include blockalign($verticalalign);
+  width:229px;
+  height:33px;
+  padding:15px;
+  border: 1px solid #D9D9D5;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+  background-color:#FBFBFA;
+  border-right:0;
+  margin-left:15px;
+}
 
-  input{
-    width:253px;
-    height: 30px;
-    line-height: 17px;
-    border: 1px solid #D9D9D5;
-    border-top-left-radius:5px;
-    border-bottom-left-radius:5px;
-    @include blockalign($verticalalign);
-
-  }
-  .sbutton, {
-    width:78px;
-    background-color:$searchcolor;
-    color:white;
-    text-decoration: bold;
-    border: 1px solid #D9D9D5;
-    border-left:0;
-    border-radius:0;
-    border-top-right-radius:5px;
-    border-bottom-right-radius: 5px;
-    line-height:17px;
-    padding:0;
-    margin:0;
-    margin-right:18px;
-    height:35px;
-
-  }
+.sbutton {
+  width:78px;
+  height:33px;
+  color:white;
+  border: 1px #2E97B1 solid;
+  border-top-right-radius:3px;
+  border-bottom-right-radius: 3px;
+  margin-right:15px;
+  background-color:$searchcolor;
+  -webkit-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .1);
+  -moz-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .1);
+  box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .1);
+  @include blockalign($verticalalign);
+    &:hover {
+      opacity: .9;
+    }
 }
 
 .browse {
@@ -129,6 +141,53 @@ form {
       vertile-align:$verticalalign;   
     }
 }
+
+.signin {
+  border:1px solid $searchcolor;
+  border-radius:5px;
+  background-color:white;
+  text-align:center;
+  font-size:14px;
+  color:$searchcolor;
+  height:35px;
+  width:72px;
+  position:relative;
+  margin-left:15px;
+  @include blockalign($verticalalign);
+    &:hover {
+      background-color:#F0FBFD;
+    }
+}
+
+.between {
+  height:50px;
+  width:0;
+  border-left:1px solid $navbordercolor;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.cart {
+  opacity:.6;
+
+    img {
+      height:20px;
+      width:20px;
+    }
+
+    &:after {
+      display: block;
+      content: "Cart";
+      font-size: 13px;
+      text-align:center;
+    }
+}
+
+.register {
+  font-size: 14px;
+  @include blockalign($verticalalign);
+}
+
 // end etsy logo, search and browse
 // END NAV
 
@@ -139,21 +198,31 @@ form {
 }
 
 aside {
-  background-color:white;
   font-size:13px;
+  display: inline-block;
+  vertical-align:middle;
   @include colorradiusgrey ($bordercolor);
   @include span-columns(3);
     
-    ul {
-      margin:0;
-      padding:25px;
+    .widget {
+      padding-left:10px;
       background-color:white;
-      border-radius:5px;
+      border:1px solid $navbordercolor;
+      border-radius:3px;
+      ul {
+        margin:5px;
+        padding:0px;
+        padding-left:20px;
 
       li {
         list-style:none;
-        padding-bottom:10px;
+        line-height:25px;
       }
+    }
+  }
+    .showresults {
+      font-weight: 700;
+      margin-top:-3px;
     }
 
     a {
@@ -164,22 +233,37 @@ aside {
         text-decoration: underline;
       }
     }
-  }
+    .allcat, h3 {
+      font-weight:bold;
+      list-style:none;
+      padding-top:5px;
+    }
+}
 
 .items {
+  display: inline-block;
+  vertical-align:middle;
   @include span-columns(8.5);
 
   .itemData {
     overflow:hidden;
     margin-bottom:30px;
-    width:225px;
-    height:272px;
+    width:22px;
+    height:225px;
     background-color:white;
     @include colorradiusgrey ($bordercolor);
     font-size:12px;
+    border:1px solid $navbordercolor;
     @include span-columns(4);
     @include omega(3n);
       
+      &:hover {
+        -webkit-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
+        -moz-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
+        box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
+        border:none;
+      }
+
       img {
         width:225px;
         height:auto;
@@ -188,10 +272,36 @@ aside {
     }
 }
 
-p {
-  title {
-    white-space: nowrap; 
-    overflow: hidden; 
+.itemText {
+  width:90%;
+  margin-left:auto;
+  margin-right: auto;
+  .price {
+    color: $pricecolor;
+    float:right;
+    margin-top:$itemDataMargin;
+  }
+
+  .seller {
+    float:left;
+    color: $sellercolor;
+    margin-top:$itemDataMargin;
+
+      &:hover {
+        text-decoration: underline;
+        cursor:pointer;
+      }
+  }
+
+  .title {
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:0;
+    padding-top:4px;
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

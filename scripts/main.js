@@ -32,14 +32,20 @@ var $itemData = $(".items");
 var itemImage, itemPrice, itemTitle, itemSeller, itemHolder;
 
 items.results.forEach( function(etsy) {
-  
-  itemPrice = "<p class='price'>" + "$" + etsy.price + " USD" +"</p>";
   itemImage ="<img src='" + etsy.Images[0].url_170x135 +"''>";
   itemTitle = "<p class ='title'>" + etsy.title + "</p>";
   itemSeller = "<p class='seller'>" + etsy.Shop.shop_name + "</p>";
-  itemHolder = "<li class='itemData'>" + itemImage + itemTitle + itemSeller + itemPrice + "</li>";
+  itemPrice = "<p class='price'>" + "$" + etsy.price + " USD" +"</p>";
+  itemHolder = "<li class='itemData'>" + itemImage + "<div class = 'itemText'>" + itemTitle + itemSeller + itemPrice + "</div>" + "</li>";
   
   $itemData.append(itemHolder);
+  });
+
+  // CSS CHANGES
+  
+  $(".searchtext").on("click", function() {
+    $(".searchtext").css({"background-color" : "white"});
+    $(".searchtext").css({"border" : "1px solid $searchcolor"});
   });
 
 });

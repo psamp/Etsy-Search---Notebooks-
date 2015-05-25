@@ -2,7 +2,7 @@
 <html>
 <head>
   
-  <title>notebook on Etsy, a global handmade and vintage marketplace.</title>
+  <title>notebooks on Etsy, a global handmade and vintage marketplace.</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,7 +23,7 @@
 
         <span><img src="images/etsylogo.png"></span>
 
-        <span><form method="get" action="http://www.etsy.com/search" class="sbar"><input type="text" placeholder="Search for items or shops" /><input class="sbutton" type="submit" value="Search" /></form>
+        <span><input id="search-query" class="searchtext" type="text" placeholder="Search for items or shops" value="notebooks"><button class="sbutton" type="submit" value="Search">Search</button>
         </span>
 
         <span>
@@ -34,7 +34,10 @@
       <!-- end nav left -->
 
       <div class="right">
-        <span>Register</span>
+        <span><a class="register" href="#">Register</a></span>
+        <span><button class="signin">Sign In</button></span>
+        <span><div class="between"></div></span>
+        <span class= "cart"><img src="images/cart.png"></span>
       </div>
       
     </nav>
@@ -47,14 +50,23 @@
   
   <div class="itemArea">
     <aside>
-      <ul id="sidebarCats">
+
+      <p class="showresults">Show results for:</p>
+
+      <div class = "widget">
+
+        <li class="allcat">All Categories</li>
+        <ul id="sidebarCats">
+      </div>
+
       </ul>
+
     </aside>
 
-    <div class="items">
-    </div>
+    <div class="itemfloat"></div>
+    <div class="items"></div>
+
   </div>
-  
     
   </div>
 
