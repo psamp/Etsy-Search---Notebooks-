@@ -36,16 +36,18 @@ items.results.forEach( function(etsy) {
   itemTitle = "<p class ='title'>" + etsy.title + "</p>";
   itemSeller = "<p class='seller'>" + etsy.Shop.shop_name + "</p>";
   itemPrice = "<p class='price'>" + "$" + etsy.price + " USD" +"</p>";
-  itemHolder = "<li class='itemData'>" + itemImage + "<div class = 'itemText'>" + itemTitle + itemSeller + itemPrice + "</div>" + "</li>";
+  itemLink = etsy.listing_id;
+
+  itemHolder = "<li class='itemData'>" + itemImage + "<div class = 'itemText'>" + "<a class='title' href ='https://www.etsy.com/listing/" + itemLink + "'>" + itemTitle + "</a>" + itemSeller + itemPrice + "</div>" + "</li>";
   
   $itemData.append(itemHolder);
   });
 
   // CSS CHANGES
   
-  $(".searchtext").on("click", function() {
-    $(".searchtext").css({"background-color" : "white"});
-    $(".searchtext").css({"border" : "1px solid $searchcolor"});
-  });
+  // $(".searchtext").on("click", function() {
+  //   $(".searchtext").css({"background-color" : "white"});
+  //   $(".searchtext").css({"border" : "1px solid $searchcolor"});
+  // });
 
 });

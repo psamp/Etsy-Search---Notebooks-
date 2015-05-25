@@ -21,6 +21,9 @@ body a {
 body a:hover {
   text-decoration: underline; }
 
+body li {
+  list-style: none; }
+
 .container {
   width: 980px;
   outline: none;
@@ -36,7 +39,7 @@ body a:hover {
   overflow: hidden;
   margin-bottom: 35px;
   box-shadow: 0px 0px 10px #b0b0b0;
-  border-bottom: 1px solid #F0F0EC; }
+  border-bottom: 1px solid #E1E3DF; }
 
 .navigation span {
   display: inline-block;
@@ -98,7 +101,7 @@ body a:hover {
   vertical-align: middle; }
 
 .browse:hover {
-  border: 1px solid #999999; }
+  border: 1px solid #B9B9B9; }
 
 .browse::after {
   content: "▾";
@@ -129,7 +132,7 @@ body a:hover {
 .between {
   height: 50px;
   width: 0;
-  border-left: 1px solid #F0F0EC;
+  border-left: 1px solid #E1E3DF;
   margin-left: 10px;
   margin-right: 10px; }
 
@@ -177,9 +180,10 @@ aside:last-child {
   margin-right: 0; }
 
 aside .widget {
-  padding-left: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
   background-color: white;
-  border: 1px solid #F0F0EC;
+  border: 1px solid #E1E3DF;
   border-radius: 3px; }
 
 aside .widget ul {
@@ -188,10 +192,12 @@ aside .widget ul {
   padding-left: 20px; }
 
 aside .widget ul li {
-  list-style: none;
   line-height: 25px; }
 
-aside .showresults {
+aside .subwidget {
+  border-bottom: 1px solid #E1E3DF; }
+
+aside .widgettop {
   font-weight: 700;
   margin-top: -3px; }
 
@@ -203,9 +209,7 @@ aside a:hover {
   text-decoration: underline; }
 
 aside .allcat, aside h3 {
-  font-weight: bold;
-  list-style: none;
-  padding-top: 5px; }
+  font-weight: bold; }
 
 .items {
   display: inline-block;
@@ -227,7 +231,7 @@ aside .allcat, aside h3 {
   border-radius: 3px;
   border: #E1E3DF;
   font-size: 12px;
-  border: 1px solid #F0F0EC;
+  border: 1px solid #E1E3DF;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -245,8 +249,7 @@ aside .allcat, aside h3 {
 .items .itemData:hover {
   -webkit-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, 0.3);
   -moz-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, 0.3);
-  box-shadow: 0 10px 10px -10px rgba(176, 176, 176, 0.3);
-  border: none; }
+  box-shadow: 0 10px 10px -10px rgba(176, 176, 176, 0.3); }
 
 .items .itemData img {
   width: 225px;
@@ -267,16 +270,10 @@ aside .allcat, aside h3 {
   color: #B4B2B4;
   margin-top: 7px; }
 
-.itemText .seller:hover {
-  text-decoration: underline;
-  cursor: pointer; }
-
 .itemText .title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
-  padding-top: 4px; }
-
-.itemText .title:hover {
-  text-decoration: underline; }
+  padding-top: 4px;
+  color: #555555; }

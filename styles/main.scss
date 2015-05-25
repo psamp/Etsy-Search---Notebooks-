@@ -5,7 +5,7 @@
 
 $searchcolor:#33A5C0;
 $etsyfive:#F45800;
-$navbordercolor: #F0F0EC;
+$navbordercolor: #E1E3DF;
 $verticalalign:middle;
 $bordercolor:#E1E3DF;
 $pricecolor:#78C042;
@@ -44,6 +44,9 @@ body {
     &:hover {
       text-decoration: underline;
     }
+  }
+  li {
+    list-style:none;
   }
 }
 
@@ -129,7 +132,7 @@ body {
   position:relative;
   @include blockalign($verticalalign);
     &:hover {
-      border:1px solid #999999;
+      border:1px solid #B9B9B9;
     }
     &::after {
       content: "▾";
@@ -205,7 +208,8 @@ aside {
   @include span-columns(3);
     
     .widget {
-      padding-left:10px;
+      padding:10px;
+      margin-bottom:30px;
       background-color:white;
       border:1px solid $navbordercolor;
       border-radius:3px;
@@ -215,12 +219,15 @@ aside {
         padding-left:20px;
 
       li {
-        list-style:none;
         line-height:25px;
       }
     }
   }
-    .showresults {
+    .subwidget {
+      border-bottom:1px solid $navbordercolor;
+    }
+    
+    .widgettop {
       font-weight: 700;
       margin-top:-3px;
     }
@@ -235,8 +242,6 @@ aside {
     }
     .allcat, h3 {
       font-weight:bold;
-      list-style:none;
-      padding-top:5px;
     }
 }
 
@@ -261,7 +266,6 @@ aside {
         -webkit-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
         -moz-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
         box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
-        border:none;
       }
 
       img {
@@ -286,11 +290,6 @@ aside {
     float:left;
     color: $sellercolor;
     margin-top:$itemDataMargin;
-
-      &:hover {
-        text-decoration: underline;
-        cursor:pointer;
-      }
   }
 
   .title {
@@ -299,9 +298,6 @@ aside {
     white-space: nowrap;
     margin:0;
     padding-top:4px;
-    
-    &:hover {
-      text-decoration: underline;
-    }
+    color: $fontcolor;
   }
 }
