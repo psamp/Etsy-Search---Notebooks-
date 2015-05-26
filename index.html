@@ -50,16 +50,22 @@
 <div class="container">
   
   <div class="itemArea">
+    
+    <!-- sidebar -->
+
     <aside>
 
       <p class="widgettop">Show results for:</p>
 
+      <!-- sidebar categories -->
+      
       <div class = "widget">
-
         <li class="allcat">All Categories</li>
-        <ul id="sidebarCats">
+        <ul id="sidebarCats" class="sidebarCats">
         </ul>
       </div>
+
+      <!-- end sidebar categories -->
 
       <p class="widgettop">Refine your search</p>
 
@@ -67,29 +73,81 @@
       
         <div class="subwidget">
       
-      
           <li class="widgettop">Item Type</li>
+
           <ul>
-            <li><input type="radio"></input> All Items</li>
+            <li><input type="radio"> All Items</li>
         
-            <li><input type="radio"></input> Handmade</li>
+            <li><input type="radio"> Handmade</li>
         
-            <li><input type="radio"></input> Vintage</li>
-        
+            <li><input type="radio"> Vintage</li>
           </ul>
       
         </div>
 
-        <div class="subwidget"></div>s
+        <div class="subwidget">
+          <li class="widgettop">Price</li>
+          <span>
+            <input id="low" class="low" type="text" placeholder="Low"> to <input id="high" class="high" type="text" placeholder="High">
+          </span>
+        </div>
+        
+        <div class="subwidget">
+          <li class="widgettop">Filter by Color</li>
+
+          <div class="bycolor">
+
+            <a class="red" style ="background-color:#f40b32;" href="#"></a>
+            <a class="orange" style="background-color: #ff7f00;" href="#"></a>
+            <a class="yellow" style="background-color: #f3cc0c;" href="#"></a>
+            <a class="green" style="background-color: #0ac20a;" href="#"></a>
+            <a class="blue" href="#" style="background-color: #0cccf3;"></a>
+            <a class="purple" href="#" style="background-color: #a60cf3;"></a>
+            <a class="black" style="background-color: #000;" href="#"></a>
+            <a class="white" style="background-color:#fff;"></a>
+
+          </div>
+        </div>
+
+        <div class="subwidget">
+          <li class="widgettop">Ordering Options</li>
+          
+          <ul>
+              <li><input type="checkbox"> <a href="#">Accepts Etsy Giftcards</a></li>
+              <li><input type="checkbox"> <a href="#">Customizable</a></li>
+          </ul>
+
+        </div>
+
+        <div class="subwidget">
+          <li class="widgettop">Shop Location</li>
+          <ul>
+            <li><input type="radio"> <a href="#">Anywhere</a></li>
+        
+            <li><input type="radio"> <a href="#">United States</a></li>
+            <p><a href="#">Choose a custom location</a></p>
+          </ul>
+        </div>
+
+        <div class="subwidget">
+          <li class="widgettop">Ship To</li>
+          <span><button class="browse usbutton">United States</button></span>
+        </div>
       
       </div>
     
     </aside>
 
-    <div class="itemfloat"></div>
-    <div class="items"></div>
+    <!-- end sidebar -->
 
-  </div>
+    <p class="widgettop">
+      <!-- <span> <a>All Categories</a> <div class="arrow">&#10095;</div> "notebooks" (90,082 Results)</span> -->
+    </p>
+      
+    <div class="items"></div>
+    </div>
+<!-- 
+  </div> -->
     
   </div>
 

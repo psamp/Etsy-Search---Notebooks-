@@ -12,6 +12,7 @@ $pricecolor:#78C042;
 $sellercolor:#B4B2B4;
 $itemDataMargin: 7px;
 $fontcolor:#555555;
+$boxshadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
 
 @mixin navborder ($navbordercolor) {
   border-bottom: 1px solid $navbordercolor;
@@ -25,6 +26,12 @@ $fontcolor:#555555;
 @mixin colorradiusgrey ($bordercolor) {
   border-radius:3px;
   border: $bordercolor;
+}
+
+@mixin boxshadowed ($boxshadow) {
+  -webkit-box-shadow: $boxshadow;
+  -moz-box-shadow: $boxshadow;
+  box-shadow: $boxshadow;
 }
 
 // END VARIABLES & MIXINS
@@ -87,8 +94,6 @@ body {
     }
 }
 
-// etsy logo, search & browse
-
 .searchtext {
   @include blockalign($verticalalign);
   width:229px;
@@ -120,6 +125,7 @@ body {
     }
 }
 
+
 .browse {
   border:1px solid #E5E5E5;
   border-radius:5px;
@@ -141,7 +147,6 @@ body {
       left:3px;
       line-height:1em;
       position: relative;
-      vertile-align:$verticalalign;   
     }
 }
 
@@ -172,8 +177,8 @@ body {
 
 .cart {
   opacity:.6;
-   &:hover {
-    opacity: none;
+    &:hover {
+      opacity: 1;
    }
     img {
       height:20px;
@@ -192,16 +197,9 @@ body {
   font-size: 14px;
   @include blockalign($verticalalign);
 }
-
-// end etsy logo, search and browse
 // END NAV
 
-// ITEMS
-.itemArea {
-  max-width:100%;
-  @include outer-container;
-}
-
+// SIDEBAR
 aside {
   font-size:13px;
   display: inline-block;
@@ -209,42 +207,80 @@ aside {
   @include colorradiusgrey ($bordercolor);
   @include span-columns(3);
     
+    // sidebar sections 
+
     .widget {
       padding:10px;
       margin-bottom:30px;
       background-color:white;
       border:1px solid $navbordercolor;
       border-radius:3px;
+
       ul {
-        margin:5px;
         padding:0px;
-        padding-left:20px;
+        margin-top:10px;
 
       li {
         line-height:25px;
       }
     }
   }
+
+    // individual sections
+
     .subwidget {
       border-bottom:1px solid $navbordercolor;
+      padding:10px;
+      margin-bottom: 10px;
     }
+
+    // widget titles
     
     .widgettop {
       font-weight: 700;
       margin-top:-3px;
+      margin-bottom:10px;
     }
 
-    a {
-      text-decoration: none;
-      color:$searchcolor;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
     .allcat, h3 {
       font-weight:bold;
     }
+
+}
+
+.usbutton {
+  width:100%;
+  color:black;
+  &:after{
+    margin-left:65px;
+    font-size:17px;
+  }
+}
+
+// padding for categories
+#sidebarCats {
+  padding-left:20px;
+}
+
+// filter by color
+.bycolor {
+  padding:0;
+
+  a {
+    height:20px;
+    width:20px;
+    border:1px solid $navbordercolor;
+    border-radius:5px;
+    @include blockalign($verticalalign);
+  }
+}
+// END SIDEBAR
+
+// ITEMS
+
+.itemArea {
+  max-width:100%;
+  @include outer-container;
 }
 
 .items {
@@ -265,9 +301,7 @@ aside {
     @include omega(3n);
       
       &:hover {
-        -webkit-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
-        -moz-box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
-        box-shadow: 0 10px 10px -10px rgba(176, 176, 176, .3);
+        @include boxshadowed ($boxshadow);
       }
 
       img {
@@ -278,6 +312,7 @@ aside {
     }
 }
 
+// seller, price, and shop name
 .itemText {
   width:90%;
   margin-left:auto;
@@ -305,4 +340,11 @@ aside {
     padding-top:4px;
     color: $fontcolor;
   }
+}
+// end
+
+
+.arrow {
+  font-size: 10px;
+  font-weight: 700;
 }

@@ -109,8 +109,7 @@ body li {
   font-size: 10px;
   left: 3px;
   line-height: 1em;
-  position: relative;
-  vertile-align: middle; }
+  position: relative; }
 
 .signin {
   border: 1px solid #33A5C0;
@@ -157,17 +156,6 @@ body li {
   display: inline-block;
   vertical-align: middle; }
 
-.itemArea {
-  max-width: 100%;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-
-.itemArea::after {
-  clear: both;
-  content: "";
-  display: table; }
-
 aside {
   font-size: 13px;
   display: inline-block;
@@ -190,29 +178,57 @@ aside .widget {
   border-radius: 3px; }
 
 aside .widget ul {
-  margin: 5px;
   padding: 0px;
-  padding-left: 20px; }
+  margin-top: 10px; }
 
 aside .widget ul li {
   line-height: 25px; }
 
 aside .subwidget {
-  border-bottom: 1px solid #E1E3DF; }
+  border-bottom: 1px solid #E1E3DF;
+  padding: 10px;
+  margin-bottom: 10px; }
 
 aside .widgettop {
   font-weight: 700;
-  margin-top: -3px; }
-
-aside a {
-  text-decoration: none;
-  color: #33A5C0; }
-
-aside a:hover {
-  text-decoration: underline; }
+  margin-top: -3px;
+  margin-bottom: 10px; }
 
 aside .allcat, aside h3 {
   font-weight: bold; }
+
+.usbutton {
+  width: 100%;
+  color: black; }
+
+.usbutton:after {
+  margin-left: 65px;
+  font-size: 17px; }
+
+#sidebarCats {
+  padding-left: 20px; }
+
+.bycolor {
+  padding: 0; }
+
+.bycolor a {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #E1E3DF;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.itemArea {
+  max-width: 100%;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.itemArea::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 .items {
   display: inline-block;
@@ -283,3 +299,7 @@ aside .allcat, aside h3 {
   margin: 0;
   padding-top: 4px;
   color: #555555; }
+
+.arrow {
+  font-size: 10px;
+  font-weight: 700; }

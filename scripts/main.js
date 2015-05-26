@@ -47,8 +47,7 @@ items.results.forEach( function(etsy) {
   // CSS CHANGES
   
   // $(".searchtext").on("click", function() {
-  //   $(".searchtext").css({"background-color" : "white"});
-  //   $(".searchtext").css({"border" : "1px solid $searchcolor"});
+  //   $(".searchtext").addClass(".searchclick");
   // });
 
 });
