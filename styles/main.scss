@@ -172,7 +172,9 @@ body {
 
 .cart {
   opacity:.6;
-
+   &:hover {
+    opacity: none;
+   }
     img {
       height:20px;
       width:20px;
@@ -290,6 +292,9 @@ aside {
     float:left;
     color: $sellercolor;
     margin-top:$itemDataMargin;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .title {

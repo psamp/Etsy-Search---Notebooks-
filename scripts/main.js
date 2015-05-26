@@ -36,9 +36,10 @@ items.results.forEach( function(etsy) {
   itemTitle = "<p class ='title'>" + etsy.title + "</p>";
   itemSeller = "<p class='seller'>" + etsy.Shop.shop_name + "</p>";
   itemPrice = "<p class='price'>" + "$" + etsy.price + " USD" +"</p>";
-  itemLink = etsy.listing_id;
+  itemListLink = etsy.listing_id;
+  itemSellerLink = etsy.Shop.shop_name;
 
-  itemHolder = "<li class='itemData'>" + itemImage + "<div class = 'itemText'>" + "<a class='title' href ='https://www.etsy.com/listing/" + itemLink + "'>" + itemTitle + "</a>" + itemSeller + itemPrice + "</div>" + "</li>";
+  itemHolder = "<li class='itemData'>" + "<a href ='https://www.etsy.com/listing/" + itemListLink + "'>" +itemImage + "</a>" + "<div class = 'itemText'>" + "<a class='title' href ='https://www.etsy.com/listing/" + itemListLink + "'>" + itemTitle + "</a>" + "<a href='" + "https://www.etsy.com/shop/" + itemSellerLink + "'>" + itemSeller + "</a>" + itemPrice + "</div>" + "</li>";
   
   $itemData.append(itemHolder);
   });

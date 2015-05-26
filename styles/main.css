@@ -139,6 +139,9 @@ body li {
 .cart {
   opacity: .6; }
 
+.cart:hover {
+  opacity: 1; }
+
 .cart img {
   height: 20px;
   width: 20px; }
@@ -269,6 +272,9 @@ aside .allcat, aside h3 {
   float: left;
   color: #B4B2B4;
   margin-top: 7px; }
+
+.itemText .seller:hover {
+  text-decoration: underline; }
 
 .itemText .title {
   overflow: hidden;
