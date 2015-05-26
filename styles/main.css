@@ -111,6 +111,11 @@ body li {
   line-height: 1em;
   position: relative; }
 
+.register {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle; }
+
 .signin {
   border: 1px solid #33A5C0;
   border-radius: 5px;
@@ -151,11 +156,6 @@ body li {
   font-size: 13px;
   text-align: center; }
 
-.register {
-  font-size: 14px;
-  display: inline-block;
-  vertical-align: middle; }
-
 aside {
   font-size: 13px;
   display: inline-block;
@@ -179,7 +179,7 @@ aside .widget {
 
 aside .widget ul {
   padding: 0px;
-  margin-top: 10px; }
+  margin-top: 0px; }
 
 aside .widget ul li {
   line-height: 25px; }
@@ -197,6 +197,9 @@ aside .widgettop {
 aside .allcat, aside h3 {
   font-weight: bold; }
 
+#sidebarCats {
+  padding-left: 20px; }
+
 .usbutton {
   width: 100%;
   color: black; }
@@ -204,9 +207,6 @@ aside .allcat, aside h3 {
 .usbutton:after {
   margin-left: 65px;
   font-size: 17px; }
-
-#sidebarCats {
-  padding-left: 20px; }
 
 .bycolor {
   padding: 0; }

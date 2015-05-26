@@ -5,72 +5,106 @@
   <title>notebooks on Etsy, a global handmade and vintage marketplace.</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS -->
 
   <link rel="stylesheet" href="styles/vendor/normalize.css">
 
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- END CSS -->
+
+  <!-- FAVICON -->
+
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- END FAVICON -->
 </head>
 <body>
 
+<!-- NAV -->
 
-<!-- nav left -->
   <div class="navigation">
-    
-    <!-- nav left -->
+
     <nav>
+
+      <!-- nav left -->
 
       <div class="left">
 
         <span><img src="images/etsylogo.png"></span>
 
-        <span><input id="search-query" class="searchtext" type="text" placeholder="Search for items or shops" value="notebooks"><button class="sbutton" type="submit" value="Search">Search</button>
+        <span>
+        <input id="search-query" class="searchtext" type="text" placeholder="Search for items or shops" value="notebooks"><button class="sbutton" type="submit" value="Search">Search</button>
+        
         </span>
 
         <span>
+
           <button class="browse">Browse</button>
+        
         </span>
 
       </div>
       <!-- end nav left -->
 
+      <!-- nav right -->
+
       <div class="right">
+
         <span><a class="register" href="#">Register</a></span>
+
         <span><button class="signin">Sign In</button></span>
+         
         <span><div class="between"></div></span>
+
         <span class= "cart"><img src="images/cart.png"></span>
       </div>
+
+      <!-- end nav right -->
       
     </nav>
+
   </div>
 
+<!-- END NAV -->
 
-<!-- container -->
+<!-- CONTAINER -->
 
 <div class="container">
   
+  <!-- ITEM AREA -->
+
   <div class="itemArea">
     
     <!-- sidebar -->
 
     <aside>
 
-      <p class="widgettop">Show results for:</p>
+    <!-- categories -->
+    
+    <p class="widgettop">Show results for:</p>
 
-      <!-- sidebar categories -->
-      
       <div class = "widget">
+        
         <li class="allcat">All Categories</li>
+        
         <ul id="sidebarCats" class="sidebarCats">
+        
         </ul>
+      
       </div>
 
-      <!-- end sidebar categories -->
+      <!-- end categories -->
 
-      <p class="widgettop">Refine your search</p>
-
-      <div class="widget">
+      <!-- filters -->
       
+      <p class="widgettop">Refine your search:</p>
+      
+      <div class="widget">
+        
+        <!-- item type -->
+
         <div class="subwidget">
       
           <li class="widgettop">Item Type</li>
@@ -85,13 +119,25 @@
       
         </div>
 
+        <!-- end item type -->
+
+        <!-- price -->
         <div class="subwidget">
+          
           <li class="widgettop">Price</li>
+          
           <span>
+           
             <input id="low" class="low" type="text" placeholder="Low"> to <input id="high" class="high" type="text" placeholder="High">
+          
           </span>
+        
         </div>
         
+        <!-- end price -->
+
+        <!-- filter by color -->
+
         <div class="subwidget">
           <li class="widgettop">Filter by Color</li>
 
@@ -108,6 +154,9 @@
 
           </div>
         </div>
+        <!-- end filter by color  -->
+
+        <!-- ordring options -->
 
         <div class="subwidget">
           <li class="widgettop">Ordering Options</li>
@@ -119,49 +168,68 @@
 
         </div>
 
+        <!-- end ordering options -->
+
+        <!-- shop location -->
+
         <div class="subwidget">
+          
           <li class="widgettop">Shop Location</li>
+          
           <ul>
+          
             <li><input type="radio"> <a href="#">Anywhere</a></li>
         
             <li><input type="radio"> <a href="#">United States</a></li>
+          
             <p><a href="#">Choose a custom location</a></p>
+
           </ul>
+
         </div>
+
+        <!-- end shop location -->
+
+        <!-- ship to  -->
 
         <div class="subwidget">
           <li class="widgettop">Ship To</li>
           <span><button class="browse usbutton">United States</button></span>
         </div>
-      
+        
+        <!-- end ship to -->
+
       </div>
-    
+
+      <!-- end filters -->
+
     </aside>
 
-    <!-- end sidebar -->
+    <!-- END SIDEBAR -->
+
+    <!-- ETSY ITEMS -->
 
     <p class="widgettop">
       <!-- <span> <a>All Categories</a> <div class="arrow">&#10095;</div> "notebooks" (90,082 Results)</span> -->
     </p>
-      
+
     <div class="items"></div>
-    </div>
-<!-- 
-  </div> -->
     
+    <!-- END ETSY ITEMS  -->
+
+    </div>
+    <!-- END ITEM AREA -->
   </div>
 
-</div>
+<!--  END CONTAINER -->
 
-<!-- end container -->
-
-  <!-- js -->
+  <!-- JS -->
   <script src="scripts/vendor/jquery.min.js"></script>
 
   <script src="scripts/results.js"></script>
 
   <script src="scripts/main.js"></script>
-  <!-- end js -->
+  <!-- END JS -->
 
 </body>
 </html>
