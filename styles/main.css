@@ -189,6 +189,9 @@ aside .subwidget {
   padding: 10px;
   margin-bottom: 10px; }
 
+aside .subwidget:last-child {
+  border: 0; }
+
 aside .widgettop {
   font-weight: 700;
   margin-top: -3px;

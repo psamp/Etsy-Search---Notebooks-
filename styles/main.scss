@@ -246,7 +246,10 @@ aside {
       border-bottom:1px solid $navbordercolor;
       padding:10px;
       margin-bottom: 10px;
-    }
+        &:last-child {
+          border:0;
+        }
+      }
 
     // widget titles
     

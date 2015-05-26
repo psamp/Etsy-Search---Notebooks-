@@ -20,18 +20,19 @@ sidebarItems.forEach( function (sbItem) {
 });
 
 
-// // ITEMS
+// ITEMS
 
-// var itemCont = $(".items");
-// items.results.forEach( function (item) {
-
-//   itemCont.append("<div class='item'><p class='itemtitle'>" + item.title + "</p></div>")};
-
+// variables
 
 var $itemData = $(".items");
 var itemImage, itemPrice, itemTitle, itemSeller, itemHolder;
 
+// do this for each item
+
 items.results.forEach( function(etsy) {
+  
+  // item variables
+
   itemImage ="<img src='" + etsy.Images[0].url_170x135 +"''>";
   itemTitle = "<p class ='title'>" + etsy.title + "</p>";
   itemSeller = "<p class='seller'>" + etsy.Shop.shop_name + "</p>";
@@ -39,15 +40,15 @@ items.results.forEach( function(etsy) {
   itemListLink = etsy.listing_id;
   itemSellerLink = etsy.Shop.shop_name;
 
+  // link image and title to item listing, link seller, add price, and put it all in a <li>
+
   itemHolder = "<li class='itemData'>" + "<a href ='https://www.etsy.com/listing/" + itemListLink + "'>" +itemImage + "</a>" + "<div class = 'itemText'>" + "<a class='title' href ='https://www.etsy.com/listing/" + itemListLink + "'>" + itemTitle + "</a>" + "<a href='" + "https://www.etsy.com/shop/" + itemSellerLink + "'>" + itemSeller + "</a>" + itemPrice + "</div>" + "</li>";
   
+  // append to html
+
   $itemData.append(itemHolder);
   });
 
   // CSS CHANGES
-  
-  // $(".searchtext").on("click", function() {
-  //   $(".searchtext").addClass(".searchclick");
-  // });
 
 });
