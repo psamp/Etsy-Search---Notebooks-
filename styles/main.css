@@ -222,6 +222,34 @@ aside .allcat, aside h3 {
   display: inline-block;
   vertical-align: middle; }
 
+.lowtohigh {
+  display: inline-block;
+  vertical-align: middle; }
+
+.lowtohigh .low {
+  width: 30%;
+  height: 35px;
+  border: 1px solid #E1E3DF;
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  border-radius: 5px; }
+
+.lowtohigh .high {
+  width: 30%;
+  height: 35px;
+  border: 1px solid #E1E3DF;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px; }
+
+.lowtohigh button {
+  border-radius: 5px;
+  width: 20%;
+  height: 35px;
+  background-color: white;
+  border: 1px solid #E1E3DF; }
+
 .itemArea {
   max-width: 100%;
   max-width: 68em;
